@@ -2,8 +2,6 @@
 
 ## Table of contents
 
-------
-
 - [Background](#Background)
 - [Maintainers](#Maintainers)
 
