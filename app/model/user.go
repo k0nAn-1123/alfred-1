@@ -10,5 +10,3 @@ import (
 
 // User is the golang structure for table user.
 type User internal.User
-
-// Fill with you ideas below.

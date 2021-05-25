@@ -26,7 +26,6 @@ type PermissionDao struct {
 
 // PermissionColumns defines and stores column names for table permission.
 type permissionColumns struct {
-	Id         string //
 	Type       string //
 	Permission string //
 }
@@ -38,7 +37,6 @@ var (
 		DB:    g.DB("health"),
 		Table: "permission",
 		Columns: permissionColumns{
-			Id:         "id",
 			Type:       "type",
 			Permission: "permission",
 		},

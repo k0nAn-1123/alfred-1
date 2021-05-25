@@ -4,11 +4,17 @@
 
 package internal
 
+import (
+	"github.com/gogf/gf/os/gtime"
+)
+
 // Bodyinfo is the golang structure for table bodyinfo.
 type Bodyinfo struct {
-	ID          uint `orm:"ID,primary"  json:"iD"`          //
-	Height      int  `orm:"Height"      json:"height"`      //
-	Weight      int  `orm:"Weight"      json:"weight"`      //
-	FatRatio    int  `orm:"FatRatio"    json:"fatRatio"`    //
-	MuscleRatio int  `orm:"MuscleRatio" json:"muscleRatio"` //
+	ID          uint        `orm:"ID,primary"  json:"iD"`          //
+	Height      int         `orm:"Height"      json:"height"`      //
+	Weight      int         `orm:"Weight"      json:"weight"`      //
+	FatRatio    float64     `orm:"FatRatio"    json:"fatRatio"`    //
+	MuscleRatio float64     `orm:"MuscleRatio" json:"muscleRatio"` //
+	RecordDate  *gtime.Time `orm:"RecordDate"  json:"recordDate"`  //
+	UserID      uint        `orm:"UserID"      json:"userID"`      //
 }

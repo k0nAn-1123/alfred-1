@@ -10,5 +10,3 @@ import (
 
 // Permission is the golang structure for table permission.
 type Permission internal.Permission
-
-// Fill with you ideas below.

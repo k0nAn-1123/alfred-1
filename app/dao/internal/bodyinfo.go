@@ -31,6 +31,8 @@ type bodyinfoColumns struct {
 	Weight      string //
 	FatRatio    string //
 	MuscleRatio string //
+	RecordDate  string //
+	UserID      string //
 }
 
 var (
@@ -45,6 +47,8 @@ var (
 			Weight:      "Weight",
 			FatRatio:    "FatRatio",
 			MuscleRatio: "MuscleRatio",
+			RecordDate:  "RecordDate",
+			UserID:      "UserID",
 		},
 	}
 )

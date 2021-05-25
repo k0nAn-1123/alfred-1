@@ -10,5 +10,3 @@ import (
 
 // Bodyinfo is the golang structure for table bodyinfo.
 type Bodyinfo internal.Bodyinfo
-
-// Fill with you ideas below.

@@ -33,7 +33,7 @@ func (s *sessionService) GetUser(ctx context.Context) *model.User {
 	return nil
 }
 
-// 删除用户Session。
+// 删除用户Session
 func (s *sessionService) RemoveUser(ctx context.Context) error {
 	customCtx := Context.Get(ctx)
 	if customCtx != nil {
