@@ -19,7 +19,7 @@
 
 # Database.
 [database]
-    link  = "mysql:root:123456@tcp(192.168.171.128:3306)/health"
+    link  = "mysql:root:123456@tcp(192.168.171.128:3306)/alfred"
     debug = true
     # Database logger.
     [database.logger]
@@ -45,6 +45,6 @@
 [gfcli]
     # 自定义DAO生成配置(默认是读取database配置)
     [[gfcli.gen.dao]]
-        link   = "mysql:root:123456@tcp(192.168.171.128:3306)/health"
+        link   = "mysql:root:123456@tcp(192.168.171.128:3306)/alfred"
         group  = "health"
         tables = ""
