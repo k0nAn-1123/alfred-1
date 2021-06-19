@@ -14,12 +14,14 @@ type HealthReq struct {
 }
 
 type PasswordReq struct {
+	ID			int
 	Account		string
 	Password	string
 	Level		int
 	WebName		string
 	Domain		string
 	Company 	string
+	Remark		string
 }
 
 type PassListReq struct {

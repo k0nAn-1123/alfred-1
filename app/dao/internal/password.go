@@ -39,8 +39,8 @@ type passwordColumns struct {
 var (
 	// Password is globally public accessible object for table password operations.
 	Password = PasswordDao{
-		M:     g.DB("health").Model("password").Safe(),
-		DB:    g.DB("health"),
+		M:     g.DB("default").Model("password").Safe(),
+		DB:    g.DB("default"),
 		Table: "password",
 		Columns: passwordColumns{
 			ID:       "ID",

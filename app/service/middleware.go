@@ -25,6 +25,7 @@ func (s *serviceMiddleware) Ctx(r *ghttp.Request) {
 	}
 	r.Middleware.Next()
 }
+
 //// 鉴权中间件，只有登录成功之后才能通过
 //func (s *serviceMiddleware) Auth(r *ghttp.Request) {
 //	if User.IsSignedIn(r.Context()) {

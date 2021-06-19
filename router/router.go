@@ -9,6 +9,17 @@ import (
 func init() {
 	s := g.Server()
 	s.Group("/", func(group *ghttp.RouterGroup) {
-		group.ALL("/health", api.Health.GetHealthInfo)
+		//group.Middleware(
+		//	service.MiddleWare.Ctx,
+		//	service.MiddleWare.CORS,
+		//)
+		group.POST("/login", api.Auth.Login)
+		group.POST("/logout", api.Auth.Logout)
+
+		group.GET("/health", api.Health.GetHealthInfo)
+		group.POST("/health", api.Health.AddBodyInfo)
+
+		group.POST("/pwd", api.Password.Add)
+		group.PUT("/pwd", api.Password.Modify)
 	})
 }

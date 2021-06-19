@@ -11,16 +11,28 @@ var Auth = authApi{}
 
 type authApi struct {}
 
-func (a *healthApi) Auth(r *ghttp.Request) {
+func (a *authApi) Login(r *ghttp.Request) {
 	var (
 		req *model.AuthReq
 	)
 	if err := r.Parse(&req); err != nil {
 		response.JsonExit(r, 500, err.Error())
 	}
-	if err := service.AuthService.Login(r.Context(), req); err != nil {
+	if id, err := service.AuthService.Login(r.Context(), req); err != nil {
 		response.JsonExit(r, 500, err.Error())
 	} else {
-		response.JsonExit(r, 200, "Welcome, master.")
+		response.JsonExit(r, 200, "Welcome, master.", id)
 	}
+}
+
+func (a *authApi) Logout(r *ghttp.Request) {
+	var (
+		req *model.AuthReq
+	)
+	if err := service.AuthService.Logout(r.Context(), req); err != nil {
+		response.JsonExit(r, 500, err.Error())
+	} else {
+		response.JsonExit(r, 200, "Bye, master.")
+	}
+
 }

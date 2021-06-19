@@ -33,8 +33,8 @@ type permissionColumns struct {
 var (
 	// Permission is globally public accessible object for table permission operations.
 	Permission = PermissionDao{
-		M:     g.DB("health").Model("permission").Safe(),
-		DB:    g.DB("health"),
+		M:     g.DB("default").Model("permission").Safe(),
+		DB:    g.DB("default"),
 		Table: "permission",
 		Columns: permissionColumns{
 			Type:       "type",

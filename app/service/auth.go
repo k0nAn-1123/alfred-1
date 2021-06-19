@@ -12,17 +12,17 @@ type authService struct {}
 var AuthService = authService{}
 
 // 登录
-func (a *authService) Login(ctx context.Context, r *model.AuthReq) error {
+func (a *authService) Login(ctx context.Context, r *model.AuthReq) (uint, error) {
 	user, err := dao.User.FindOne("Identification=? and Password=?", r.Identification, r.Password)
 	if err != nil {
-		return err
+		return 0, err
 	}
 
 	if user == nil {
-		return errors.New("There is no such a person in my database.")
+		return 0, errors.New("There is no such a person in my database.")
 	} else if user.Permission != 1 {
 		err := "Sorry, " + user.NickName + " only my master can login to my system."
-		return errors.New(err)
+		return 0, errors.New(err)
 	}
 
 	Context.SetUser(ctx, &model.ContextUser{
@@ -32,7 +32,7 @@ func (a *authService) Login(ctx context.Context, r *model.AuthReq) error {
 		Nickname: 		user.NickName,
 		Permission:		user.Permission,
 	})
-	return nil
+	return user.ID, nil
 }
 
 // 登出

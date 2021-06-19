@@ -38,8 +38,8 @@ type bodyinfoColumns struct {
 var (
 	// Bodyinfo is globally public accessible object for table bodyinfo operations.
 	Bodyinfo = BodyinfoDao{
-		M:     g.DB("health").Model("bodyinfo").Safe(),
-		DB:    g.DB("health"),
+		M:     g.DB("default").Model("bodyinfo").Safe(),
+		DB:    g.DB("default"),
 		Table: "bodyinfo",
 		Columns: bodyinfoColumns{
 			ID:          "ID",
