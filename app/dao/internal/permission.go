@@ -37,8 +37,8 @@ var (
 		DB:    g.DB("default"),
 		Table: "permission",
 		Columns: permissionColumns{
-			Type:       "type",
-			Permission: "permission",
+			Type:       "Type",
+			Permission: "Permission",
 		},
 	}
 )

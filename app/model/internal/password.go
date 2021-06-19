@@ -6,12 +6,11 @@ package internal
 
 // Password is the golang structure for table password.
 type Password struct {
-	ID       int    `orm:"ID,primary" json:"iD"`       //
+	ID       uint   `orm:"ID,primary" json:"iD"`       //
 	Account  string `orm:"Account"    json:"account"`  //
 	Password string `orm:"Password"   json:"password"` //
 	Level    int    `orm:"Level"      json:"level"`    //
 	WebName  string `orm:"WebName"    json:"webName"`  //
-	Domain   string `orm:"Domain"     json:"domain"`   //
-	Company  string `orm:"Company"    json:"company"`  //
+	Company  int    `orm:"Company"    json:"company"`  //
 	Remark   string `orm:"Remark"     json:"remark"`   //
 }

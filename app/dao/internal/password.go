@@ -31,7 +31,6 @@ type passwordColumns struct {
 	Password string //
 	Level    string //
 	WebName  string //
-	Domain   string //
 	Company  string //
 	Remark   string //
 }
@@ -48,7 +47,6 @@ var (
 			Password: "Password",
 			Level:    "Level",
 			WebName:  "WebName",
-			Domain:   "Domain",
 			Company:  "Company",
 			Remark:   "Remark",
 		},

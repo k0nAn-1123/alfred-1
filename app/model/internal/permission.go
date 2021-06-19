@@ -6,6 +6,6 @@ package internal
 
 // Permission is the golang structure for table permission.
 type Permission struct {
-	Type       int    `orm:"type,primary" json:"type"`       //
-	Permission string `orm:"permission"   json:"permission"` //
+	Type       int    `orm:"Type,primary" json:"type"`       //
+	Permission string `orm:"Permission"   json:"permission"` //
 }
