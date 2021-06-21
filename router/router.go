@@ -21,5 +21,7 @@ func init() {
 
 		group.POST("/pwd", api.Password.Add)
 		group.PUT("/pwd", api.Password.Modify)
+		group.GET("/pwd", api.Password.GetPwd)
+		group.GET("/pwd/list", api.Password.GetList)
 	})
 }
